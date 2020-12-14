@@ -65,7 +65,7 @@ conn.on('qr', qr =>
    {
       small: true
    });
-   console.log(`[ ${moment().format("HH:mm:ss")} ] XP-TN Ready scan now!`);
+   console.log(`[ ${moment().format("HH:mm:ss")} ]  Ready scan now!`);
 });
 
 conn.on('credentials-updated', () =>
@@ -113,7 +113,7 @@ conn.sendMessage(group.gid, "hello everyone", MessageType.extendedText) // say h
 
 }
 
-// FF XP-TN
+// FF Ahsan
 if(text.includes(".cek")){
 var num = text.replace(/.cek/ , "")
 var idn = num.replace("0","+62");
@@ -126,7 +126,7 @@ console.log(exists);
 conn.sendMessage(id ,`${gg} ${exists ? " exists " : " does not exist"} on WhatsApp`, MessageType.text)
 }
 
-//Chat XP-TN
+//Chat Ahsan
 else if (text == 'assalamualaikum'){
 conn.sendMessage(id, 'Walaikumsalam, Ketik .help/.info/.donasi Contoh #help' ,MessageType.text);
 }
