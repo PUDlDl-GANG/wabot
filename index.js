@@ -4,12 +4,12 @@
 * jangan ubah semuanya kecuali nama bot instagram yt itu ajah yg lain jangan!!!
 * hargai pembuat skrip woy!!!
 */
-const XPTN = 'Ahsan Adinul'; // Nama Bot Whatsapp
-const instagram = 'https://instagram.com/muh_ahsan1999'; // Nama Instagramlu cok
-const nomer = 'https://Wa.me/+6285157566434'; // Nomor whatsapplu cok
+const XPTN = '👾XP-TN👾'; // Nama Bot Whatsapp
+const instagram = 'https://instagram.com/mragung23'; // Nama Instagramlu cok
+const nomer = 'https://Wa.me/+6289655478810'; // Nomor whatsapplu cok
 const aktif = 'Tergantung jaringan'; // Kapan bot lu aktif
-const groupwa = 'https://chat.whatsapp.com/KIAPXwyHxnMKwtc6fw'; // OFFICIAL GRUP LU 1
-const youtube = '*Ahsan Adinul*'; // OFFICIAL GRUP LU 2
+const groupwa = 'https://chat.whatsapp.com/GDdd0I3WlF5LnMVifmS7rN'; // OFFICIAL GRUP LU 1
+const youtube = 'https://www.youtube.com/channel/UCMiQsqzWvj-zKxNlFlG_Wiw'; // OFFICIAL GRUP LU 2
 //
 const qrcode = require("qrcode-terminal");
 const moment = require("moment");
@@ -31,7 +31,12 @@ const xp4 = require("./lib/xp4.js");
 const xp5 = require("./lib/xp5.js");
 const xp6 = require("./lib/xp6.js");
 const readTextInImage = require('./lib/ocr')
-
+const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
+            + 'VERSION:3.0\n' 
+            + 'FN:XP Ganss\n' // full name
+            + 'ORG:Owner XPTN Bot;\n' // the organization of the contact
+            + 'TEL;type=CELL;type=VOICE;waid=6289655478810:+62 896-5547-8810\n' // WhatsApp ID + phone number
+            + 'END:VCARD'
 //
 const
 {
@@ -65,7 +70,7 @@ conn.on('qr', qr =>
    {
       small: true
    });
-   console.log(`[ ${moment().format("HH:mm:ss")} ]  Ready scan now!`);
+   console.log(`[ ${moment().format("HH:mm:ss")} ] XP-TN Ready scan now!`);
 });
 
 conn.on('credentials-updated', () =>
@@ -80,11 +85,11 @@ fs.existsSync('./session.json') && conn.loadAuthInfo('./session.json')
 //conn.connectOptions.agent = ProxyAgent ('http://1.0.180.120:8080')
 conn.connect();
 
-conn.on('user-presence-update', json => console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @muh_ahsan1999`))
+conn.on('user-presence-update', json => console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @mragung23`))
 conn.on('message-status-update', json =>
 {
    const participant = json.participant ? ' (' + json.participant + ')' : '' // participant exists when the message is from a group
-   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @muh_ahsan1999`)
+   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @mragung23`)
 })
 
 conn.on('message-new', async(m) =>
@@ -113,7 +118,7 @@ conn.sendMessage(group.gid, "hello everyone", MessageType.extendedText) // say h
 
 }
 
-// FF Ahsan
+// FF XP-TN
 if(text.includes(".cek")){
 var num = text.replace(/.cek/ , "")
 var idn = num.replace("0","+62");
@@ -126,9 +131,9 @@ console.log(exists);
 conn.sendMessage(id ,`${gg} ${exists ? " exists " : " does not exist"} on WhatsApp`, MessageType.text)
 }
 
-//Chat Ahsan
+//Chat XP-TN
 else if (text == 'assalamualaikum'){
-conn.sendMessage(id, 'Walaikumsalam, Ketik .help/.info/.donasi Contoh #help' ,MessageType.text);
+conn.sendMessage(id, '3aalaikumsalam, Ketik .help/.info/.donasi Contoh #help' ,MessageType.text);
 }
 else if (text == 'salam'){
 conn.sendMessage(id, 'Waalaikumsalam, Ketik .help/.info/.donasi Contoh #help' ,MessageType.text);
@@ -152,10 +157,13 @@ else if (text == 'Asu'){
 conn.sendMessage(id, 'Lu Asw' ,MessageType.text);
 }
 else if (text == '.owner'){
-conn.sendMessage(id, 'Owner XP-TN wa.me/+6285157566434' ,MessageType.text);
+conn.sendMessage(id, 'Owner XP-TN wa.me/+6289655478810' ,MessageType.text);
 }
 else if (text == 'Agung'){
 conn.sendMessage(id, 'Aku BOT nya XP-TN' ,MessageType.text);
+}
+else if (text == 'wenda'){
+conn.sendMessage(id, 'pacar owner ihh' ,MessageType.text);
 }
 else if (text == 'bangsat'){
 conn.sendMessage(id, 'toxic terdeteksi' ,MessageType.text);
@@ -176,7 +184,7 @@ else if (text == 'Hai'){
 conn.sendMessage(id, 'Ya?, Ketik .help/.info/.donasi Contoh .help' ,MessageType.text);
 }
 else if (text == '.ttp'){
-conn.sendMessage(id, ' *COMMAND PREMIUM CHAT WA https://wa.me/+6285157566434* ' ,MessageType.text);
+conn.sendMessage(id, ' *COMMAND PREMIUM CHAT WA https://wa.me/6289655478810* ' ,MessageType.text);
 }
 else if (text == 'Woi'){
 conn.sendMessage(id, 'Ya?, Ketik .help/.info/.donasi Contoh .help' ,MessageType.text);
@@ -218,13 +226,13 @@ else if (text == 'Cuy'){
 conn.sendMessage(id, 'Ya?, Ketik .help/.info/.donasi Contoh .help' ,MessageType.text);
 }
 else if (text == '.frendsowner'){
-conn.sendMessage(id, 'kawan1 iskandar wa.me/+6285157566434' ,MessageType.text);
+conn.sendMessage(id, 'kawan1 iskandar wa.me/+60136670107' ,MessageType.text);
 }
 else if (text == '.coowner'){
-conn.sendMessage(id, 'kawan2 testing script wa.me/+6285157566434' ,MessageType.text);
+conn.sendMessage(id, 'kawan2 testing script wa.me/+6282232931618' ,MessageType.text);
 }
 else if (text == '.groupbot'){
-conn.sendMessage(id, 'group bot whatsapp https://chat.whatsapp.com/KIAPXwyHxnMKwtc6fw' ,MessageType.text);
+conn.sendMessage(id, 'group bot whatsapp https://chat.whatsapp.com/GDdd0I3WlF5LnMVifmS7rN' ,MessageType.text);
 }
 else if (text == '.tools1'){
 conn.sendMessage(id, ' *Menampilkan Fitur tools1!!!* ' ,MessageType.text);
@@ -1290,7 +1298,30 @@ conn.sendMessage(id, info.info(id, XPTN, corohelp, tampilTanggal, tampilWaktu, i
 else if (text == '.foto'){
 conn.sendMessage(id, 'kirim .foto cewek/cowok\n\nContoh: .foto cewek' ,MessageType.text);
 }
-
+else if (text == '.help'){
+conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/@mragung23' ,MessageType.text);
+}
+else if (text == '.tools1'){
+conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/@mragung23' ,MessageType.text);
+}
+else if (text == '.menu'){
+conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/@mragung23' ,MessageType.text);
+}
+else if (text == '.tool2'){
+conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/@mragung23' ,MessageType.text);
+}
+else if (text == '.tools3'){
+conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/@mragung23' ,MessageType.text);
+}
+else if (text == '.tools4'){
+conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/@mragung23' ,MessageType.text);
+}
+else if (text == '.tools5'){
+conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/@mragung23' ,MessageType.text);
+}
+else if (text == '.tools6'){
+conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾XP-TNNBOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/@mragung23' ,MessageType.text);
+}
    if (messageType == 'imageMessage')
    {
       let caption = imageMessage.caption.toLocaleLowerCase()
