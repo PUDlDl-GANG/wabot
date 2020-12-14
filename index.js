@@ -471,6 +471,30 @@ if (text.includes('.randomcry')){
         })
     })
 }
+if (text.includes(".spamsms")){
+const teks = text.replace(/.spamsms /, "")
+axios.get(`https://arugaz.herokuapp.com/api/spamsms?no=${teks}&jum=20`).then((res) => {
+	conn.sendMessage(id, '[WAIT] Proses...❗', MessageType.text)
+    let hasil = ` *INFO SPAM SMS 20 PESAN* \n\n _${res.data.logs}_`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes(".spamcall")){
+const teks = text.replace(/!spamcall /, "")
+axios.get(`https://arugaz.herokuapp.com/api/spamcall?no=${teks}`).then((res) => {
+	conn.sendMessage(id, '[WAIT] Proses Sayang', MessageType.text)
+    let hasil = ` *INFO SPAM CALL* \n\n _${res.data.logs}_`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes(".tinyurl")){
+const teks = text.replace(/.tinyurl /, "")
+axios.get(`https://tinyurl.com/api-create.php?url=${teks}`).then((res) => {
+	conn.sendMessage(id, '───❉ ITSMEIKY BOT ❉──\n [WAIT] Proses...❗', MessageType.text)
+    let hasil = ` ───❉ ITSMEIKY BOT ❉──\n *Link yang diperpendek dengan tinyurl* \n\n *link:* _${res.data}_ `;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
 if (text.includes('.map')){
   var teks = text.replace(/.map /, '')
     axios.get('https://mnazria.herokuapp.com/api/maps?search='+teks)
