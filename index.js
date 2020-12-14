@@ -28,8 +28,8 @@ const readTextInImage = require('./lib/ocr')
 const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n' 
             + 'FN:Ahsan Adinul\n' // full name
-            + 'ORG:Owner Ahsan 1.0.1 Bot;\n' // the organization of the contact
-            + 'TEL;type=CELL;type=VOICE;waid=6285157566434:+62 851-5756-6434\n' // WhatsApp ID + phone number
+            + 'ORG:Owner Itsmeiky 1.0.1 Bot;\n' // the organization of the contact
+            + 'TEL;type=CELL;type=VOICE;waid=6281281872699:+62 812-8187-2699\n' // WhatsApp ID + phone number
             + 'END:VCARD'
 //
 const
