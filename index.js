@@ -31,12 +31,7 @@ const xp4 = require("./lib/xp4.js");
 const xp5 = require("./lib/xp5.js");
 const xp6 = require("./lib/xp6.js");
 const readTextInImage = require('./lib/ocr')
-const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
-            + 'VERSION:3.0\n' 
-            + 'FN:XP Ganss\n' // full name
-            + 'ORG:Owner XPTN Bot;\n' // the organization of the contact
-            + 'TEL;type=CELL;type=VOICE;waid=6289655478810:+62 896-5547-8810\n' // WhatsApp ID + phone number
-            + 'END:VCARD'
+
 //
 const
 {
@@ -161,9 +156,6 @@ conn.sendMessage(id, 'Owner XP-TN wa.me/+6285157566434' ,MessageType.text);
 }
 else if (text == 'Agung'){
 conn.sendMessage(id, 'Aku BOT nya XP-TN' ,MessageType.text);
-}
-else if (text == 'wenda'){
-conn.sendMessage(id, 'pacar owner ihh' ,MessageType.text);
 }
 else if (text == 'bangsat'){
 conn.sendMessage(id, 'toxic terdeteksi' ,MessageType.text);
