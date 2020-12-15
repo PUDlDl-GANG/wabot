@@ -368,7 +368,7 @@ if (text.includes('.nulis2')){
       imageToBase64(res.data.result)
         .then(
           (ress) => {
-            conn.sendMessage(id, 'Bot Lagi Nulis 📝', MessageType.text)
+            conn.sendMessage(id, 'Bot Lagi Nulis 📝', MessageType.text, { quoted: m })
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, buf, MessageType.image)
         })
@@ -380,6 +380,7 @@ if (text.includes('.ttp2')){
       imageToBase64(res.data.result)
         .then(
           (ress) => {
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, buf, MessageType.image)
         })
@@ -388,6 +389,7 @@ if (text.includes('.ttp2')){
 if (text.includes(".yt")){
 const teks = text.replace(/.yt /, "")
 axios.get(`https://st4rz.herokuapp.com/api/ytv?url=${teks}`).then((res) => {
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
     let hasil = `Video telah tersedia pada link di bawah, silahkan klik link dan download hasilnya\n\n\nJudul: ${res.data.title}\n\nUkuran video: ${res.data.filesize}\n\nLink: ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
@@ -395,6 +397,7 @@ axios.get(`https://st4rz.herokuapp.com/api/ytv?url=${teks}`).then((res) => {
 if (text.includes(".nekopoi2")){
 const teks = text.replace(/.nekopoi2 /, "")
 axios.get(`https://mhankbarbar.herokuapp.com/api/nekopoi?url=${teks}&apikey=YJgk853Hbai`).then((res) => {
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
     let hasil = `${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
@@ -406,6 +409,7 @@ if (text.includes('.randomhentai2')){
         .then(
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
             conn.sendMessage(id, buf, MessageType.image)
         })
     })
@@ -415,6 +419,7 @@ if (text.includes(".quotesanime")){
 const teks = text.replace(/.quotesanime /, "")
 axios.get(`https://animechanapi.xyz/api/quotes?anime=${teks}`).then((res) => {
     let hasil = `quotesanime\n\n${res.data.quote} *character* \n${res.data.character} *anime* \n${res.data.anime}`;
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
@@ -424,11 +429,13 @@ if (text.includes('.tagme')) {
        text: `@${nomor.split("@s.whatsapp.net")[0]} tagged!`,
        contextInfo: { mentionedJid: [nomor] }
  }
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
  conn.sendMessage(id, options, MessageType.text)
 }
 if (text.includes(".harinasional")){
 const teks = text.replace(/.harinasional /, "")
 axios.get(`https://api.haipbis.xyz/harinasional?tanggal=${teks}`).then((res) => {
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
     let hasil = `➸  *Tanggal : ${res.data.tanggal}*\n\n➸ keterangan : ${res.data.keterangan}`;
     conn.sendMessage(id, hasil ,MessageType.text);
   })
@@ -453,6 +460,7 @@ if (text.includes('.randomcry')){
         .then(
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
             conn.sendMessage(id, buf, MessageType.image)
         })
     })
@@ -475,6 +483,7 @@ axios.get('https://api.banghasan.com/quran/format/json/acak').then((res) => {
     const sr = /{(.*?)}/gi;
     const hs = res.data.acak.id.ayat;
     const ket = `${hs}`.replace(sr, '');
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
     let hasil = `[${ket}]   ${res.data.acak.ar.teks}\n\n${res.data.acak.id.teks}(QS.${res.data.surat.nama}, Ayat ${ket})`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
@@ -544,6 +553,7 @@ if (text.includes(".nekonime")) {
 if (text.includes('.wetzodiak')) {
 const teks = text.replace(/.wetzodiak /, "")
 axios.get(`https://arugaz.herokuapp.com/api/getzodiak?nama=aruga&tgl-bln-thn=${teks}`).then((res) => {
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
     let hasil = `➡️ Lahir : ${res.data.lahir}*\n➡ ️ultah : ${res.data.ultah}\n➡ ️usia : ${res.data.usia}\n➡ zodiak : ${res.data.zodiak}️`;
     conn.sendMessage(id, hasil ,MessageType.text);
   })
@@ -646,6 +656,7 @@ axios.get(`https://arugaz.herokuapp.com/api/dewabatch?q=${teks}`).then((res) => 
 if (text.includes(".otakudesu")){
 const teks = text.replace(/.otakudesu /, "")
 const animes =  axios.get(`https://mhankbarbar.herokuapp.com/api/otakudesu?q=${teks}&apiKey=F0Zuy3oCaQogy9MOt3tk`).then((res) => {
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
     let hasil = ` *Nih Anime Nya :)*\n\n _${animes.data.title}\n\n${animes.data.info}\n\n${animes.data.sinopsis}_ `;
     conn.sendMessage(from, animes.data.thumb, 'otakudesu.jpg', hasil, MessageType.text);
 })
@@ -691,6 +702,7 @@ axios.get(`https://arugaz.herokuapp.com/api/indohot`).then((res) => {
           (ress) => {
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
             var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
             conn.sendMessage(id, buf, MessageType.image)
         })
     })
@@ -729,7 +741,7 @@ axios.get(`https://raw.githubusercontent.com/ArugaZ/grabbed-results/main/random/
 }
 if (text.includes(".katabijak")){
 const teks = text.replace(/.katabijak /, "")
-axios.get(`https://raw.githubusercontent.com/ArugaZ/grabbed-results/main/random/katabijax.txt${teks}`).then((res) => {
+axios.get(`https://raw.githubusercontent.com/ArugaZ/grabbed-results/main/random/katabijax.txt`).then((res) => {
     let hasil = `katabijak tersedia\n👇👇👇👇👇👇👇👇👇\n\nJudul: ${res.data.title}\n\katabijak Tersedia: ${res.data.filesize}\n\nLink: ${res.data.result}`;
     conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
     conn.sendMessage(id, hasil ,MessageType.text);
