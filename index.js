@@ -559,7 +559,7 @@ else if (msg.body == ".leave") {
       		msg.reply("This command can only be used in a group!");
     	}
 }
-	} else if (msg.body ==  %groupInfo ) {
+	} else if (msg.body == '.groupInfo') {
 		//let chat = await msg.getChat()
 		if (chat.isGroup) {
 			msg.reply(`
