@@ -146,7 +146,7 @@ else if (text == 'Asu'){
 conn.sendMessage(id, 'Lu Asw' ,MessageType.text);
 }
 else if (text == '.owner'){
-conn.sendMessage(id, 'Owner *Ahsan Adinul* wa.me/+6285157566434' ,MessageType.text);
+conn.sendMessage(id, 'Owner *ItsmeikyXSec404* wa.me/+6281281872699' ,MessageType.text);
 }
 else if (text == 'bangsat'){
 conn.sendMessage(id, 'toxic terdeteksi' ,MessageType.text);
@@ -606,7 +606,7 @@ axios.get(`https://st4rz.herokuapp.com/api/simsimi?kata=${teks}`).then((res) => 
 }
 if (text.includes(".puisi1")){
 const teks = text.replace(/.puisi1 /, "")
-axios.get(`https://arugaz.herokuapp.com/api/puisi1`).then((res) => {
+axios.get(`https://arugaz.herokuapp.com/api/puisi2`).then((res) => {
 conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
     let hasil = ` *Nih Puisinya Kak :)*\n\n _${res.data.result}_ `;
     conn.sendMessage(id, hasil ,MessageType.text);
