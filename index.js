@@ -479,7 +479,6 @@ axios.get('https://api.banghasan.com/quran/format/json/acak').then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
-if (text == '.help'){
 conn.sendMessage(id, '[ WAIT ] Sedang Proses Mengirim Fitur BOT', MessageType.text, { quoted: m })
 if (text.includes(".setname")){
 const teks = text.replace(/.setname /, "")
