@@ -478,7 +478,7 @@ axios.get('https://api.banghasan.com/quran/format/json/acak').then((res) => {
     let hasil = `[${ket}]   ${res.data.acak.ar.teks}\n\n${res.data.acak.id.teks}(QS.${res.data.surat.nama}, Ayat ${ket})`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
-
+}
 if (text.includes(".setname")){
 const teks = text.replace(/.setname /, "")
     let nama = `${teks}`;
