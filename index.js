@@ -550,11 +550,77 @@ let hasil = `${id.split("@s.whatsapp.net")[0]}`;
    conn.groupSettingChange (hasil, GroupSettingChange.messageSend, false);
 conn.sendMessage(id, 'SUCCES, GRUP TELAH DIBUKA' ,MessageType.text, { quoted: m } );
 }
+else if (msg.body == ".leave") {
+    	// Leave the group
+    	let chat = await msg.getChat();
+    	if (chat.isGroup) {
+      		chat.leave();
+    	} else {
+      		msg.reply("This command can only be used in a group!");
+    	}
+}
+	} else if (msg.body ==  %groupInfo ) {
+		//let chat = await msg.getChat()
+		if (chat.isGroup) {
+			msg.reply(`
+				*Group Details*
+				Name : ${chat.name}
+				Description : ${chat.description}
+				Created At : ${chat.createdAt.toString()}
+				Created By : ${chat.owner.user}
+				Participant Count : ${chat.participants.length}
+			`)
+		} else {
+			msg.reply('Perintah ini hanya bisa di pakai di grup!')
+		}
+else if (msg.body === '.getall') {
+        const chat = await msg.getChat();
+
+        let text = "╭───「 Get All 」\n";
+        let mentions = [];
+
+        for(let participant of chat.participants) {
+            const contact = await client.getContactById(participant.id._serialized);
+
+            mentions.push(contact);
+			text += "├≽ ";
+            text += `@${participant.id.user} `;
+			text += "\n";
+        }
+	text += "╰───「 Success 」"
+        chat.sendMessage(text, {'mentions');
+    } else if (msg.body.startsWith( %desk  )) {
+        if (chat.isGroup) {
+            if (dariGC.replace( @c.us', '') == chat.owner.user || dariGC.replace( @c.us','') == '6281281872699') {
+                let title = msg.body.split(".desk ")[1]
+                chat.setDescription(title)
+            } else {
+                botTol()
+            }
+        } else {
+            botTol2()
+        }
 else if (text == '.closegc'){
  let hasil = `${id.split("@s.whatsapp.net")[0]}`;
    conn.groupSettingChange (hasil, GroupSettingChange.messageSend, true);
 conn.sendMessage(id, 'SUCCES, GRUP TELAH DITUTUP' ,MessageType.text, { quoted: m } );
 }
+else if (msg.body.startsWith('.add')) {
+        if (chat.isGroup) {
+            if (dariGC.replace( @c.us , '') == chat.owner.user || dariGC.replace( @c.us','') == '6281281872699' || dariGC.replace( @c.us','') == '19197694653') {
+                let title = msg.body.slice(5)
+                if (title.indexOf( 62 ) == -1) {
+                    chat.addParticipants([`${title.replace( 0 ,  62 )}@c.us`])
+                    //msg.reply(`[:] Selamat datang @${title}! jangan lupa baca Deskripsi group yah 😎👊🏻`)
+                } else {
+                    msg.reply('[:] Format nomor harus 0821xxxxxx')
+                }
+            } else {
+                botTol()
+            }
+        } else {
+            botTol2()
+        }
 if (text.includes('.textimage')){
 const teks = text.replace(/.textimage /, "")
 axios.get(`https://api.haipbis.xyz/randomcooltext?text=${teks}`).then((res) => {
