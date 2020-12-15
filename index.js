@@ -722,6 +722,7 @@ if (text.includes(".infogempa")){
 if (text.includes(".fakta")){
 const teks = text.replace(/.fakta /, "")
 axios.get(`https://raw.githubusercontent.com/ArugaZ/grabbed-results/main/random/faktaunix.txt${teks}`).then((res) => {
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
     let hasil = `fakta tersedia\n👇👇👇👇👇👇👇👇👇\n\nJudul: ${res.data.title}\n\fakta Tersedia: ${res.data.filesize}\n\nLink: ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
@@ -730,6 +731,7 @@ if (text.includes(".katabijak")){
 const teks = text.replace(/.katabijak /, "")
 axios.get(`https://raw.githubusercontent.com/ArugaZ/grabbed-results/main/random/katabijax.txt${teks}`).then((res) => {
     let hasil = `katabijak tersedia\n👇👇👇👇👇👇👇👇👇\n\nJudul: ${res.data.title}\n\katabijak Tersedia: ${res.data.filesize}\n\nLink: ${res.data.result}`;
+    conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
@@ -1701,6 +1703,7 @@ if (text.includes(".meme"))
 const teks = text.replace(/.chord3 /, "")
 axios.get(`https://st4rz.herokuapp.com/api/chord?q=${teks}`).then((res) => {
     let hasil = `${res.data.result}`;
+    conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
     conn.sendMessage(id, hasil ,MessageType.text);
   })
  }
@@ -1756,6 +1759,7 @@ if (text.includes('.text3d')){
           (ress) => {
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
             var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
             conn.sendMessage(id, buf, MessageType.image)
         })
     })
@@ -1767,6 +1771,7 @@ if (text.includes('.waifu2')){
         .then(
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
             conn.sendMessage(id, buf, MessageType.image)
         })
     })
@@ -1774,6 +1779,7 @@ if (text.includes('.waifu2')){
 if (text.includes(".cuaca")){
 const teks = text.replace(/.cuaca /, "")
 axios.get(`https://mhankbarbars.herokuapp.com/api/cuaca?q=${teks}&apiKey=N2Ws9kp3KTDYtry5Jjyz`).then((res) => {
+    conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
     let hasil = `Tempat : ${res.data.result.tempat}\nCuaca : ${res.data.result.cuaca}\nAngin : ${res.data.result.angin}\nSuhu : ${res.data.result.suhu}\nKelembapan : ${res.data.result.kelembapan}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
@@ -1781,6 +1787,7 @@ axios.get(`https://mhankbarbars.herokuapp.com/api/cuaca?q=${teks}&apiKey=N2Ws9kp
 if (text.includes(".renungan")){
 const teks = text.replace(/.renungan /, "")
 axios.get(`https://docs-jojo.herokuapp.com/api/renungan`).then((res) => {
+    conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
     let hasil = `Isi : ${res.data.Isi} \njudul : ${res.data.judul} \npesan : ${res.data.pesan}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
@@ -1913,6 +1920,7 @@ if (text.includes('.profileig')){
         .then(
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
             conn.sendMessage(id, buf, MessageType.image)
         })
     })
@@ -1981,6 +1989,7 @@ if (text.includes('.blackpink')){
         .then(
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
             conn.sendMessage(id, buf, MessageType.image)
         })
     })
@@ -1999,6 +2008,7 @@ if (text.includes('.memecreate')){
         .then(
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
             conn.sendMessage(id, buf, MessageType.image)
         })
     })
