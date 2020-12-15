@@ -677,6 +677,20 @@ axios.get(`https://arugaz.herokuapp.com/api/howbucins`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes(".cinta")){
+const teks = text.replace(/!cinta /, "")
+axios.get(`https://arugaz.herokuapp.com/api/howbucins`).then((res) => {
+	conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
+    let hasil = ` ${res.data.desc} \n\n *Persen Bucin Lo!!!* _${res.data.persen}_`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes("!selamat")){
+const teks = text.replace(/!selamat /, "")
+const say = (`*───❉ ITSMEIKY BOT ❉──*\n yeah dapat tulisan selamat *${teks}* \n Selamat *${teks}* juga`)
+	conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
+    conn.sendMessage(id, say ,MessageType.text);
+}
 if (text.includes(".spamsms")){
 const teks = text.replace(/#spamsms /, "")
 axios.get(`https://arugaz.herokuapp.com/api/spamsms?no=${teks}&jum=20`).then((res) => {
@@ -702,7 +716,6 @@ axios.get(`https://arugaz.herokuapp.com/api/indohot`).then((res) => {
           (ress) => {
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
             var buf = Buffer.from(ress, 'base64')
-            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
             conn.sendMessage(id, buf, MessageType.image)
         })
     })
@@ -718,15 +731,23 @@ axios.get(`https://arugaz.herokuapp.com/api/sdmovie?film=${teks}`).then((res) =>
 if (text.includes(".infoig")){
   const teks = text.replace(/.infoig /, "")
   axios.get(`https://alfians-api.herokuapp.com/api/stalk?username=${teks}`).then ((res) =>{
-  conn.sendMessage(id, '[WAIT] Searching...⏳', MessageType.text)
+  conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
   let hasil = `BIODATA INSTAGRAM ATAS NAMA _${teks}_ \n\n *Username✍️* : _${res.data.Username}_ \n *Nama✍️* : _${res.data.Name}_ \n *Jumlah Followers✍️* : _${res.data.Jumlah_Followers}_ \n *Jumlah Following✍️* : _${res.data.Jumlah_Following}_ \n *Jumlah Post✍️* : _${res.data.Jumlah_Post}_ `;
   conn.sendMessage(id, hasil, MessageType.text);
+})
+}
+if (text.includes(".tinyurl")){
+const teks = text.replace(/.tinyurl /, "")
+axios.get(`https://tinyurl.com/api-create.php?url=${teks}`).then((res) => {
+	conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
+    let hasil = ` ───❉ ITSMEIKY BOT V2 ❉──\n *Link yang diperpendek dengan tinyurl* \n\n *link:* _${res.data}_ `;
+    conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
 if (text.includes(".infogempa")){
   const teks = text.replace(/.infogempa /, "")
   axios.get(`https://arugaz.herokuapp.com/api/infogempa`).then ((res) =>{
-  conn.sendMessage(id, '[WAIT] Searching...⏳', MessageType.text)
+  conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
   let hasil = ` *INFO GEMPA* \n\ *Lokasi* : _${res.data.lokasi}_ \n *Kedalaman✍️* : _${res.data.kedalaman}_ \n *Koordinat✍️* : _${res.data.koordinat}_ \n *Magnitude✍️* : _${res.data.magnitude}_ \n *Waktu✍️* : _${res.data.waktu}_ `;
   conn.sendMessage(id, hasil, MessageType.text);
 })
