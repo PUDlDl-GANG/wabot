@@ -1777,6 +1777,7 @@ if (text.includes('.gaming2')){
         .then(
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
             conn.sendMessage(id, buf, MessageType.image)
         })
     })
@@ -1784,6 +1785,7 @@ if (text.includes('.gaming2')){
 if (text.includes(".animesearch")){
 const teks = text.replace(/.animesearch /, "")
 axios.get(`https://docs-jojo.herokuapp.com/api/samehadaku?q=${teks}`).then((res) => {
+    conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
     let hasil = `title : ${res.data.title} \n *thumb* : ${res.data.result.thumb} \n *link* : ${res.data.result.link}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
@@ -1791,6 +1793,7 @@ axios.get(`https://docs-jojo.herokuapp.com/api/samehadaku?q=${teks}`).then((res)
 if (text.includes(".jadwaltvnow")){
 const teks = text.replace(/.jadwalTV /, "")
 axios.get(`https://api.haipbis.xyz/jadwaltvnow`).then((res) => {
+    conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
     let hasil = `Jam : ${res.data.jam}\n\n${res.data.jadwalTV}`;
     conn.sendMessage(id, hasil ,MessageType.text);
   })
@@ -1967,6 +1970,7 @@ if (text.includes('.memecreate')){
 if (text.includes(".ytmp4")){
 const teks = text.replace(/.ytmp4 /, "")
 axios.get(`https://st4rz.herokuapp.com/api/ytv2?url=${teks}`).then((res) => {
+    conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
     let hasil = `Audio telah tersedia pada link di bawah, silahkan klik link dan download hasilnya\n👇👇👇👇👇👇👇👇👇\n\nJudul : ${res.data.title}\n\nLink: ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
@@ -1984,7 +1988,8 @@ if (text.includes('.ttp')){
       imageToBase64(res.data.result)
         .then(
           (ress) => {
-            var buf = Buffer.from(ress, 'base64')
+            var buf = Buffer.from(ress, 'base64') 
+            conn.sendMessage(id,  [ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar , MessageType.text, { quoted: m })
             conn.sendMessage(id, buf, MessageType.image)
         })
     })
@@ -1993,6 +1998,7 @@ if (text.includes(".alay")){
 	const alay = text.split(".alay")[1]
 	axios.get(`https://api.terhambar.com/bpk?kata=${alay}`).then ((res) =>
 		{ let hasil = `${res.data.text}`
+                conn.sendMessage(id,  [ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar , MessageType.text, { quoted: m })
 		conn.sendMessage(id, hasil, MessageType.text)
 	})
 }
