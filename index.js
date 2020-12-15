@@ -554,23 +554,8 @@ else if (text == '.closegc'){
  let hasil = `${id.split("@s.whatsapp.net")[0]}`;
    conn.groupSettingChange (hasil, GroupSettingChange.messageSend, true);
 conn.sendMessage(id, 'SUCCES, GRUP TELAH DITUTUP' ,MessageType.text, { quoted: m } );
+}}
 }
-else if (msg.body.startsWith('.add')) {
-        if (chat.isGroup) {
-            if (dariGC.replace( @c.us , '') == chat.owner.user || dariGC.replace( @c.us','') == '6281281872699' || dariGC.replace( @c.us','') == '19197694653') {
-                let title = msg.body.slice(5)
-                if (title.indexOf( 62 ) == -1) {
-                    chat.addParticipants([`${title.replace( 0 ,  62 )}@c.us`])
-                    //msg.reply(`[:] Selamat datang @${title}! jangan lupa baca Deskripsi group yah 😎👊🏻`)
-                } else {
-                    msg.reply('[:] Format nomor harus 0821xxxxxx')
-                }
-            } else {
-                botTol()
-            }
-        } else {
-            botTol2()
-        }
 if (text.includes('.textimage')){
 const teks = text.replace(/.textimage /, "")
 axios.get(`https://api.haipbis.xyz/randomcooltext?text=${teks}`).then((res) => {
