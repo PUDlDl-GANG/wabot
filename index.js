@@ -574,6 +574,13 @@ axios.get(`https://api.terhambar.com/negara/World`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes(".googlespeak")){
+const teks = text.replace(/%googlespeak /, "")
+const gtts = (`https://rest.farzain.com/api/tts.php?id=${teks}&apikey=O8mUD3YrHIy9KM1fMRjamw8eg`)
+    conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
+    conn.sendMessage(id, gtts ,MessageType.text);
+}
+
 if (text.includes(".dewabatch")){
 const teks = text.replace(/.dewabatch /, "")
 axios.get(`https://alfians-api.herokuapp.com/api/dewabatch?q=${teks}`).then((res) => {
