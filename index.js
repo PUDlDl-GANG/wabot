@@ -1365,6 +1365,8 @@ conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan *ITSMEIKY BOT V2* , Foll
          exec('cwebp -q 50 ' + stiker + ' -o temp/' + jam + '.webp', (error, stdout, stderr) =>
          {
             let stik = fs.readFileSync('temp/' + jam + '.webp')
+
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
             conn.sendMessage(id, stik, MessageType.sticker)
          });
       }
