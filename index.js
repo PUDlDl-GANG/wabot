@@ -554,7 +554,6 @@ else if (text == '.closegc'){
  let hasil = `${id.split("@s.whatsapp.net")[0]}`;
    conn.groupSettingChange (hasil, GroupSettingChange.messageSend, true);
 conn.sendMessage(id, 'SUCCES, GRUP TELAH DITUTUP' ,MessageType.text, { quoted: m } );
-}}
 }
 if (text.includes('.textimage')){
 const teks = text.replace(/.textimage /, "")
