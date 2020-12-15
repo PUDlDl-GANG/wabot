@@ -1473,6 +1473,7 @@ if (text.includes(".pokemon"))
     
     axios.get(url)
       .then((result) => {
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
         var n = JSON.parse(JSON.stringify(result.data));
         var nimek =  n[Math.floor(Math.random() * n.length)];
         imageToBase64(nimek) 
@@ -1511,6 +1512,7 @@ if (text.includes(".pokemon"))
           var x = f.replace(/<br\s*[\/]?>/gi, "\n");
           var h  = x.replace(/<[^>]*>?/gm, '');
       console.log(""+ h);
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
       conn.sendMessage(id,
             `
       Arti dari nama *${nama}* adalah
