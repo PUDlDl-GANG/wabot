@@ -550,56 +550,6 @@ let hasil = `${id.split("@s.whatsapp.net")[0]}`;
    conn.groupSettingChange (hasil, GroupSettingChange.messageSend, false);
 conn.sendMessage(id, 'SUCCES, GRUP TELAH DIBUKA' ,MessageType.text, { quoted: m } );
 }
-else if (msg.body == ".leave") {
-    	// Leave the group
-    	let chat = await msg.getChat();
-    	if (chat.isGroup) {
-      		chat.leave();
-    	} else {
-      		msg.reply("This command can only be used in a group!");
-    	}
-}
-else if (msg.body == '.groupInfo') {
-		//let chat = await msg.getChat()
-		if (chat.isGroup) {
-			msg.reply(`
-				*Group Details*
-				Name : ${chat.name}
-				Description : ${chat.description}
-				Created At : ${chat.createdAt.toString()}
-				Created By : ${chat.owner.user}
-				Participant Count : ${chat.participants.length}
-			`)
-		} else {
-			msg.reply('Perintah ini hanya bisa di pakai di grup!')
-		}
-else if (msg.body === '.getall') {
-        const chat = await msg.getChat();
-
-        let text = "╭───「 Get All 」\n";
-        let mentions = [];
-
-        for(let participant of chat.participants) {
-            const contact = await client.getContactById(participant.id._serialized);
-
-            mentions.push(contact);
-			text += "├≽ ";
-            text += `@${participant.id.user} `;
-			text += "\n";
-        }
-	text += "╰───「 Success 」"
-        chat.sendMessage(text, {'mentions');
-    } else if (msg.body.startsWith( %desk  )) {
-        if (chat.isGroup) {
-            if (dariGC.replace( @c.us', '') == chat.owner.user || dariGC.replace( @c.us','') == '6281281872699') {
-                let title = msg.body.split(".desk ")[1]
-                chat.setDescription(title)
-            } else {
-                botTol()
-            }
-        } else {
-            botTol2()
-        }
 else if (text == '.closegc'){
  let hasil = `${id.split("@s.whatsapp.net")[0]}`;
    conn.groupSettingChange (hasil, GroupSettingChange.messageSend, true);
