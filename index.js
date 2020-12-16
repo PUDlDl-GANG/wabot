@@ -1647,7 +1647,7 @@ if (text.includes(".pokemon"))
  MessageType.text);
   });
   }
-  else if (text.includes(".pasangan ")) {
+  else if (text.includes("!pasangan ")) {
     const request = require('request');
     var gh = text.split("!pasangan ")[1];
     var namamu = gh.split("&")[0];
@@ -1856,6 +1856,18 @@ conn.sendMessage(id, 'Command Salah Woy Untuk Command Ketik .help Ya Njeng :v', 
 else if (text == '!help'){
 conn.sendMessage(id, 'Command Salah Woy Untuk Command Ketik .help Ya Njeng :v', MessageType.text, { quoted: m })
 }
+else if (text == '.menu'){
+conn.sendMessage(id, 'Command Salah Woy Untuk Command Ketik .help Ya Njeng :v', MessageType.text, { quoted: m })
+}
+else if (text == '#menuall'){
+conn.sendMessage(id, 'Command Salah Woy Untuk Command Ketik .help Ya Njeng :v', MessageType.text, { quoted: m })
+}
+else if (text == 'bacot'){
+conn.sendMessage(id, 'Iya Lu Bacod Njeng :v -BOT', MessageType.text, { quoted: m })
+}
+else if (text == 'bang'){
+conn.sendMessage(id, 'Iya Untuk Command Ketik .help Ya Njeng :v', MessageType.text, { quoted: m })
+}
 else if (text == '#help'){
 conn.sendMessage(id, 'Command Salah Woy Untuk Command Ketik .help Ya Njeng :v', MessageType.text, { quoted: m })
 }
@@ -1877,7 +1889,7 @@ conn.sendMessage(id, 'Pagi Juga Lord Untuk Memanggil BOT Silahkan Ketik .help', 
 else if (text == 'itsmemek'){
 conn.sendMessage(id, 'Itsmeiky Ganteng Kan :v', MessageType.text, { quoted: m })
 }
-  if (text.includes(".hostsearch")){
+  if (text.includes(".hotsearch")){
 const teks = text.replace(/.hostsearch /, "")
 axios.get(`https://api.banghasan.com/domain/hostsearch/${teks}`).then((res) => {
     let hasil = `*query : ${res.data.query}*\n\nhasil : ${res.data.hasil}`;
@@ -1912,7 +1924,7 @@ if (text.includes('.waifu2')){
 }
 if (text.includes(".cuaca")){
 const teks = text.replace(/.cuaca /, "")
-axios.get(`https://mhankbarbars.herokuapp.com/api/cuaca?q=${teks}&apiKey=N2Ws9kp3KTDYtry5Jjyz`).then((res) => {
+axios.get(`http://tobz-cuaca.herokuapp.com/?menu=cuaca&wilayah=${teks}`).then((res) => {
     let hasil = `Tempat : ${res.data.result.tempat}\nCuaca : ${res.data.result.cuaca}\nAngin : ${res.data.result.angin}\nSuhu : ${res.data.result.suhu}\nKelembapan : ${res.data.result.kelembapan}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
@@ -2047,7 +2059,7 @@ if (text.includes(".ytmp4"))
 
 if (text.includes('.profileig')){
   var teks = text.replace(/%profileig /, '')
-    axios.get('https://arugaz.herokuapp.com/api/stalk?username='+teks)
+    axios.get('https://arugaz.herokuapp.com/api/stalk?username=${teks})
     .then((res) => {
       imageToBase64(res.data.Profile_pic)
         .then(
@@ -2060,7 +2072,7 @@ if (text.includes('.profileig')){
 }
 if (text.includes('.ssweb')){
   var teks = text.replace(/.ssweb /, '')
-    axios.get('https://api.haipbis.xyz/ssweb?url='+teks)
+    axios.get('https://api.haipbis.xyz/ssweb?url=${teks})
     .then((res) => {
       imageToBase64(res.data.result)
         .then(
@@ -2086,7 +2098,7 @@ if (text.includes('.ssweb')){
 }  
 if (text.includes('.ytmp3')){
   var teks = text.replace(/.ytmp3 /, '')
-    axios.get('https://st4rz.herokuapp.com/api/yta2?url='+teks)
+    axios.get('https://st4rz.herokuapp.com/api/yta2?url=${teks})
     .then((res) => {
       imageToBase64(res.data.thumb)
         .then(
