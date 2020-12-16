@@ -435,7 +435,7 @@ if (text.includes('.animecrygif')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.gif)
+            conn.sendMessage(id, buf, MessageType.image)
         })
     })
 }
@@ -459,7 +459,7 @@ if (text.includes('.animekissgif')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.gif)
+            conn.sendMessage(id, buf, MessageType.image)
         })
     })
 }
@@ -471,7 +471,7 @@ if (text.includes('.animehuggif')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.gif)
+            conn.sendMessage(id, buf, MessageType.imagd)
         })
     })
 }
@@ -630,7 +630,7 @@ if (text.includes(".kbbi")){
 const teks = text.replace(/.kbbi /, "")
 axios.get(`https://tobz-api.herokuapp.com/api/kbbi?kata=${teks}`).then((res) => {
 	conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-    let hasil = ` *👩‍💻According to Wikipedia:👩‍💻* \n\n _${res.data.result}_ `;
+    let hasil = ` *👩‍💻According to KBBI:👩‍💻* \n\n _${res.data.result}_ `;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
