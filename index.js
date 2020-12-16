@@ -427,7 +427,66 @@ if (text.includes('.randomhentai2')){
         })
     })
 }
-
+if (text.includes('.animecrygif')){
+  var teks = text.replace(/.animecrygif /, '')
+    axios.get(`https://tobz-api.herokuapp.com/api/cry`).then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
+}
+if (text.includes('.animekissgif')){
+  var teks = text.replace(/.animekissgif /, '')
+    axios.get(`https://tobz-api.herokuapp.com/api/kiss`).then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
+}
+if (text.includes('.animehuggif')){
+  var teks = text.replace(/.animehuggif /, '')
+    axios.get(`https://tobz-api.herokuapp.com/api/hug`).then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
+}
+if (text.includes('.nsfwneko')){
+  var teks = text.replace(/.nsfwneko /, '')
+    axios.get(`https://tobz-api.herokuapp.com/api/nsfwneko`).then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
+}
+if (text.includes('.nsfwtrap')){
+  var teks = text.replace(/.nsfwneko /, '')
+    axios.get(`https://tobz-api.herokuapp.com/api/nsfwtrap`).then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
+}
 if (text.includes(".quotesanime")){
 const teks = text.replace(/.quotesanime /, "")
 axios.get(`https://animechanapi.xyz/api/quotes?anime=${teks}`).then((res) => {
