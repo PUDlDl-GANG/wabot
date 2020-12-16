@@ -555,6 +555,14 @@ axios.get(`https://arugaz.herokuapp.com/api/wikien?q=${teks}`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes(".kbbi")){
+const teks = text.replace(/.kbbi /, "")
+axios.get(`https://tobz-api.herokuapp.com/api/kbbi?kata=${teks}`).then((res) => {
+	conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
+    let hasil = ` *👩‍💻According to Wikipedia:👩‍💻* \n\n _${res.data.result}_ `;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
 if (text.includes(".nekonime")) {
   const teks = text.replace(/.nekonime /, "")
   axios.get(`https://st4rz.herokuapp.com/api/nekonime`).then((res) => {
@@ -2039,6 +2047,18 @@ if (text.includes('.samehadaku')){
 if (text.includes('.blackpink')){
   var teks = text.replace(/.blackpink /, '')
     axios.get(`https://docs-jojo.herokuapp.com/api/blackpink?text=${teks}`).then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
+}
+if (text.includes('.neon')){
+  var teks = text.replace(/.neon /, '')
+    axios.get(`https://tobz-api.herokuapp.com/api/textpro?theme=neon_light&text1=${teks}&text2=${teks}`).then((res) => {
       imageToBase64(res.data.result)
         .then(
           (ress) => {
