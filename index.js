@@ -1685,7 +1685,7 @@ if (text.includes(".lirik")){
 	conn.sendMessage(id, hasil, MessageType.text)
 	})
 }
-if (text.includes(".hentai"))
+if (text.includes(".hentai1"))
    {
     var items = ["nsfwhentai", "anime hentai", "hentai", "nsfwneko"];
     var cewe = items[Math.floor(Math.random() * items.length)];
