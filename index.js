@@ -374,6 +374,19 @@ if (text.includes('.nulis2')){
         })
     })
 }
+if (text.includes('.nekonime')){
+  var aris = text.replace(/ /, '')
+    axios.get('https://arugaz.herokuapp.com/api/nekonime')
+    .then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
+}
 if (text.includes('.ttp2')){
   var teks = text.replace(/%ttp /, '')
     axios.get(`https://mhankbarbars.herokuapp.com/api/text2image?text=${teks}&apiKey=N2Ws9kp3KTDYtry5Jjyz`).then((res) => {
