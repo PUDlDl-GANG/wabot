@@ -845,7 +845,7 @@ axios.get(`https://arugaz.herokuapp.com/api/wiki?q=${teks}`).then((res) => {
 
 if (text.includes(".sholat")){
   const teks = text.replace(/.sholat /, "")
-  axios.get(`https://api.haipbis.xyz/jadwalsholat?daerah=${teks}`).then ((res) =>{
+  axios.get(`https://tobz-api.herokuapp.com/api/jadwalshalat?q=${teks}`).then ((res) =>{
   conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
   let hasil = `Jadwal sholat di ${teks} hari ini adalah\n\nâš¡Imsyak : ${res.data.Imsyak}\nâš¡Subuh : ${res.data.Subuh} WIB\nâš¡Dzuhur : ${res.data.Dzuhur}WIB\nâš¡Ashar : ${res.data.Ashar} WIB\nâš¡Maghrib : ${res.data.Maghrib}\nâš¡Isya : ${res.data.Isya} WIB\nâš¡Tengah malam : ${res.data.Dhuha} WIB`;
   conn.sendMessage(id, hasil, MessageType.text);
@@ -1685,7 +1685,7 @@ if (text.includes(".lirik")){
 	conn.sendMessage(id, hasil, MessageType.text)
 	})
 }
-if (text.includes(".randomhentai"))
+if (text.includes(".hentai"))
    {
     var items = ["nsfwhentai", "anime hentai", "hentai", "nsfwneko"];
     var cewe = items[Math.floor(Math.random() * items.length)];
