@@ -538,7 +538,6 @@ if (text.includes('.tagme')) {
        text: `@${nomor.split("@s.whatsapp.net")[0]} tagged!`,
        contextInfo: { mentionedJid: [nomor] }
  }
-            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
  conn.sendMessage(id, options, MessageType.text)
 }
 if (text.includes(".harinasional")){
@@ -596,6 +595,24 @@ axios.get('https://api.banghasan.com/quran/format/json/acak').then((res) => {
     let hasil = `[${ket}]   ${res.data.acak.ar.teks}\n\n${res.data.acak.id.teks}(QS.${res.data.surat.nama}, Ayat ${ket})`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
+}
+else if (text == '.speed') {
+const timestamp = speed();
+const latensi = speed() - timestamp
+conn.sendMessage(id, `PONG!!\nSpeed: ${latensi.toFixed(4)} _Second_`, MessageType.text, {quoted: m})
+}
+if (text.includes('.texthunder')){
+  var teks = text.replace(/.texthunder /, '')
+    axios.get('http://jojo-api-doc.herokuapp.com/api/thunder?text='+teks)
+    .then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            conn.sendMessage(id, '[❗] SEDANG DIPROSES', MessageType.text)
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
 }
 if (text.includes(".setname")){
 const teks = text.replace(/.setname /, "")
@@ -2201,6 +2218,20 @@ if (text.includes('.gaming2')){
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
             conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
+}
+if (text.includes('.pornhub')){
+var porn = text.split(".pornhub ")[1];
+    var text1 = porn.split("|")[0];
+    var text2 = porn.split("|")[1];
+    axios.get(`https://mhankbarbars.herokuapp.com/api/textpro?theme=pornhub&text1=${text1}&text2=${text2}`).then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m });
         })
     })
 }
