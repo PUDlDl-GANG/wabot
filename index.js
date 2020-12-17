@@ -460,7 +460,7 @@ if (text.includes('.nsfwblowjob')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { caption:  Nih Anjim , quoted: m })
         })
     })
 }
@@ -484,7 +484,7 @@ if (text.includes('.animekissgif')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { caption:  Nih Anjim , quoted: m })
         })
     })
 }
@@ -496,7 +496,7 @@ if (text.includes('.animehuggif')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.imagd)
+            conn.sendMessage(id, buf, MessageType.image, { caption:  Nih Anjim , quoted: m })
         })
     })
 }
@@ -508,7 +508,7 @@ if (text.includes('.nsfwneko')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { caption:  Nih Anjim , quoted: m })
         })
     })
 }
@@ -520,7 +520,7 @@ if (text.includes('.nsfwtrap')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { caption:  Nih Anjim , quoted: m })
         })
     })
 }
@@ -569,7 +569,7 @@ if (text.includes('.randomcry')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { caption:  Nih Anjim , quoted: m })
         })
     })
 }
@@ -665,7 +665,7 @@ axios.get(`https://tobz-api.herokuapp.com/api/joox?q=${teks}`).then((res) => {
 const teks = text.replace(/.artinama /, "")
 axios.get(`https://scrap.terhambar.com/nama?n=${teks}`).then((res) => {
     let hasil = `ARTI NAMA MU ADALAH :\n\n*****************************\n${result}\n\n*****************************`;
-    conn.sendMessage(id, hasil ,MessageType.text);
+    conn.sendMessage(id, hasil ,MessageType.text, { caption:  Nih Anjim , quoted: m });
 })
 }
 if (text.includes(".jodoh")){
@@ -1688,7 +1688,7 @@ conn.sendMessage(id, '*🔥Nih bro fitur / command yang ada di bot ini jika ada 
          {
             let stik = fs.readFileSync('temp/' + jam + '.webp')
 	        conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, stik, MessageType.sticker, { caption:  Nih broo gak usah bilang makasih cukup donasi aja , quoted: m })
+            conn.sendMessage(id, stik, MessageType.sticker)
          });
       }
    }
