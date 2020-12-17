@@ -2087,7 +2087,7 @@ if (text.includes(".ytmp4"))
 
 if (text.includes('.profileig')){
   var teks = text.replace(/%profileig /, '')
-    axios.get('https://arugaz.herokuapp.com/api/stalk?username=${teks})
+    axios.get('https://arugaz.herokuapp.com/api/stalk?username=${teks}')
     .then((res) => {
       imageToBase64(res.data.Profile_pic)
         .then(
@@ -2100,7 +2100,7 @@ if (text.includes('.profileig')){
 }
 if (text.includes('.ssweb')){
   var teks = text.replace(/.ssweb /, '')
-    axios.get('https://api.haipbis.xyz/ssweb?url=${teks})
+    axios.get('https://api.haipbis.xyz/ssweb?url=${teks}')
     .then((res) => {
       imageToBase64(res.data.result)
         .then(
@@ -2126,7 +2126,7 @@ if (text.includes('.ssweb')){
 }  
 if (text.includes('.ytmp3')){
   var teks = text.replace(/.ytmp3 /, '')
-    axios.get('https://st4rz.herokuapp.com/api/yta2?url=${teks})
+    axios.get('https://st4rz.herokuapp.com/api/yta2?url=${teks}')
     .then((res) => {
       imageToBase64(res.data.thumb)
         .then(
