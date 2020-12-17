@@ -278,6 +278,19 @@ if (text.includes('.nulis')){
         })
     })
 }
+if (text.includes('.nulis')){
+  var teks = text.replace(/.nulis /, '')
+    axios.get('https://bangandre.herokuapp.com/nulis?teks='+teks)
+    .then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            conn.sendMessage(id, '[WAIT] Sedang Menulis Kak...❗', MessageType.text, { quoted: m })
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
+}
 if (text.includes('.tts2')){
   var teks = text.replace(/.tts2 /, '')
     axios.get('http://scrap.terhambar.com/tts?kata=${teks}')
