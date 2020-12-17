@@ -1688,7 +1688,7 @@ conn.sendMessage(id, '*🔥Nih bro fitur / command yang ada di bot ini jika ada 
          {
             let stik = fs.readFileSync('temp/' + jam + '.webp')
 	        conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, stik, MessageType.sticker)
+            conn.sendMessage(id, stik, MessageType.sticker, { caption:  Nih broo gak usah bilang makasih cukup donasi aja , quoted: m }))
          });
       }
    }
