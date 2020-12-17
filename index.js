@@ -2373,7 +2373,55 @@ if (text.includes('.blackpink')){
         })
     })
 }
-if (text.includes('.neon')){
+if (text.includes('.picjoker')){
+  var teks = text.replace(/.joker /, '')
+    axios.get(`https://tobz-api.herokuapp.com/api/textpro?theme=jokerlogo&text=${teks}`).then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
+}
+if (text.includes('.pictwolf1')){
+  var teks = text.replace(/.pictwolf2 /, '')
+    axios.get(`https://tobz-api.herokuapp.com/api/textpro?theme=wolflogo1&text1=${teks1}&text2=${teks2}`).then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
+}
+if (text.includes('.pictwolf2')){
+  var teks = text.replace(/.pictwolf2 /, '')
+    axios.get(`https://tobz-api.herokuapp.com/api/textpro?theme=wolflogo2&text1=${teks1}&text2=${teks2}`).then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
+}
+if (text.includes('.pictninja')){
+  var teks = text.replace(/.pictninja /, '')
+    axios.get(`https://tobz-api.herokuapp.com/api/textpro?theme=ninjalogo&text1=${teks2}&text2=${teks2}`).then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
+}
+if (text.includes('.pictneon')){
   var teks = text.replace(/.neon /, '')
     axios.get(`https://tobz-api.herokuapp.com/api/textpro?theme=neon_light&text1=${teks}&text2=${teks}`).then((res) => {
       imageToBase64(res.data.result)
