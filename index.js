@@ -460,7 +460,7 @@ if (text.includes('.nsfwblowjob')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
@@ -484,7 +484,7 @@ if (text.includes('.animekissgif')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
@@ -496,7 +496,7 @@ if (text.includes('.animehuggif')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.imagd)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
@@ -508,7 +508,7 @@ if (text.includes('.nsfwneko')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
@@ -520,7 +520,7 @@ if (text.includes('.nsfwtrap')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
@@ -550,7 +550,7 @@ axios.get(`https://api.haipbis.xyz/harinasional?tanggal=${teks}`).then((res) => 
  }
 if (text.includes('.cooltext')){
   var teks = text.replace(/.cooltext /, '')
-    axios.get('https://api.haipbis.xyz/randomcooltext?text='+teks)
+    axios.get('https://api.haipbis.xyz/randomcooltext?text=${teks}')
     .then((res) => {
       imageToBase64(res.data.image)
         .then(
@@ -569,7 +569,7 @@ if (text.includes('.randomcry')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
@@ -582,7 +582,7 @@ if (text.includes('.map')){
           (ress) => {
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
             var buf = Buffer.from(ress, 'base64')
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
@@ -603,7 +603,7 @@ conn.sendMessage(id, `PONG!!\nSpeed: ${latensi.toFixed(4)} _Second_`, MessageTyp
 }
 if (text.includes('.texthunder')){
   var teks = text.replace(/.texthunder /, '')
-    axios.get('http://jojo-api-doc.herokuapp.com/api/thunder?text='+teks)
+    axios.get('http://jojo-api-doc.herokuapp.com/api/thunder?text=${teks})
     .then((res) => {
       imageToBase64(res.data.result)
         .then(
@@ -1688,7 +1688,7 @@ conn.sendMessage(id, '*🔥Nih bro fitur / command yang ada di bot ini jika ada 
          {
             let stik = fs.readFileSync('temp/' + jam + '.webp')
 	        conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, stik, MessageType.sticker, { caption: 'Nih broo gak usah bilang makasih cukup donasi aja', quoted: m })
+            conn.sendMessage(id, stik, MessageType.sticker)
          });
       }
    }
