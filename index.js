@@ -285,20 +285,19 @@ if (text.includes('.nulis')){
       imageToBase64(res.data.result)
         .then(
           (ress) => {
-            conn.sendMessage(id, '[WAIT] Sedang Menulis Kak...❗', MessageType.text, { quoted: m })
             var buf = Buffer.from(ress, 'base64')
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
-if (text.includes('.tts2')){
-  var teks = text.replace(/.tts2 /, '')
+if (text.includes('.tts')){
+  var teks = text.replace(/.tts /, '')
     axios.get('http://scrap.terhambar.com/tts?kata=${teks}')
     .then((res) => {
       audioToBase64(res.data.result)
         .then(
           (ress) => {
-            conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
+            conn.sendMessage(id, '[WAIT] ProsessGaess...❗', MessageType.text, { quoted: m })
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, buf, MessageType.audio)
         })
@@ -1688,7 +1687,7 @@ conn.sendMessage(id, '*🔥Nih bro fitur / command yang ada di bot ini jika ada 
          {
             let stik = fs.readFileSync('temp/' + jam + '.webp')
 	        conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, stik, MessageType.sticker)
+            conn.sendMessage(id, stik, MessageType.sticker, { quoted: m })
          });
       }
    }
@@ -1707,7 +1706,7 @@ conn.sendMessage(id, '*🔥Nih bro fitur / command yang ada di bot ini jika ada 
                let tod = body.split("\n");
                let pjr = tod[Math.floor(Math.random() * tod.length)];
                let pantun = pjr.replace(/pjrx-line/g, "\n");
-               conn.sendMessage(id, pantun, MessageType.text)
+               conn.sendMessage(id, pantun, MessageType.text, { quoted: m })
             });
       }
    }
@@ -1794,7 +1793,7 @@ _${kata}_
 	var buf = Buffer.from(response, 'base64'); 
               conn.sendMessage(
             id,
-              buf,MessageType.image)
+              buf,MessageType.image, { quoted: m })
        
             }
         )
@@ -1823,7 +1822,7 @@ _${kata}_
 	var buf = Buffer.from(response, 'base64'); 
               conn.sendMessage(
             id,
-              buf,MessageType.image)
+              buf,MessageType.image, { quoted: m })
        
             }
         )
@@ -1853,7 +1852,7 @@ if (text.includes(".pokemon"))
 	var buf = Buffer.from(response, 'base64'); 
               conn.sendMessage(
             id,
-              buf,MessageType.image)
+              buf,MessageType.image, { quoted: m })
        
             }
         )
@@ -1947,7 +1946,7 @@ if (text.includes(".pokemon"))
 	var buf = Buffer.from(response, 'base64'); // Ta-da	
               conn.sendMessage(
             id,
-              buf,MessageType.image)
+              buf,MessageType.image, { quoted: m })
        
             }
         )
@@ -1977,7 +1976,7 @@ if (text.includes(".pokemon"))
   var buf = Buffer.from(response, 'base64'); 
               conn.sendMessage(
             id,
-              buf,MessageType.image)
+              buf,MessageType.image, { quoted: m })
        
             }
         )
@@ -2007,7 +2006,7 @@ if (text.includes(".fotoanime"))
 	var buf = Buffer.from(response, 'base64'); 
               conn.sendMessage(
             id,
-              buf,MessageType.image)
+              buf,MessageType.image, { quoted: m })
        
             }
         )
@@ -2025,7 +2024,7 @@ if (text.includes(".lirik")){
 	axios.get(`http://scrap.terhambar.com/lirik?word=${teks}`).then ((res) => {
 	     conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
 	 	let hasil = `🎶lirik🎶 lagu ${teks} \n\n\n ${res.data.result.lirik}`
-	conn.sendMessage(id, hasil, MessageType.text)
+	conn.sendMessage(id, hasil, MessageType.text, { quoted: m })
 	})
 }
 if (text.includes(".hentai1"))
@@ -2044,7 +2043,7 @@ if (text.includes(".hentai1"))
 	var buf = Buffer.from(response, 'base64'); // Ta-da	
               conn.sendMessage(
             id,
-              buf,MessageType.image)
+              buf,MessageType.image, { quoted: m })
        
             }
         )
@@ -2072,7 +2071,7 @@ if (text.includes(".meme"))
 	var buf = Buffer.from(response, 'base64'); // Ta-da	
               conn.sendMessage(
             id,
-              buf,MessageType.image)
+              buf,MessageType.image, { quoted: m })
        
             }
         )
@@ -2157,7 +2156,7 @@ if (text.includes('.text3d')){
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
@@ -2169,7 +2168,7 @@ if (text.includes('.waifu2')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
@@ -2217,7 +2216,7 @@ if (text.includes('.gaming2')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
@@ -2331,7 +2330,7 @@ if (text.includes('.profileig')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
@@ -2344,7 +2343,7 @@ if (text.includes('.ssweb')){
           (ress) => {
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
             var buf = Buffer.from(ress, 'base64')
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
@@ -2357,7 +2356,7 @@ if (text.includes('.ssweb')){
           (ress) => {
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
             var buf = Buffer.from(ress, 'base64')
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }  
@@ -2370,7 +2369,7 @@ if (text.includes('.ytmp3')){
           (ress) => {
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
             var buf = Buffer.from(ress, 'base64')
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
@@ -2400,7 +2399,7 @@ if (text.includes('.blackpink')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
@@ -2412,7 +2411,7 @@ if (text.includes('.picjoker')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
@@ -2424,7 +2423,7 @@ if (text.includes('.pictwolf1')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
@@ -2436,7 +2435,7 @@ if (text.includes('.pictwolf2')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
@@ -2448,7 +2447,7 @@ if (text.includes('.pictninja')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
@@ -2460,7 +2459,7 @@ if (text.includes('.pictneon')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
@@ -2479,7 +2478,7 @@ if (text.includes('.memecreate')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
@@ -2506,7 +2505,7 @@ if (text.includes('.ttp')){
           (ress) => {
             var buf = Buffer.from(ress, 'base64') 
             conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-            conn.sendMessage(id, buf, MessageType.image)
+            conn.sendMessage(id, buf, MessageType.image, { quoted: m })
         })
     })
 }
