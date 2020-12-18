@@ -267,7 +267,7 @@ conn.sendMessage(id, 'Sama sama, semoga harimu menyenangkan :)' ,MessageType.tex
 
 if (text.includes('.nulis')){
   var teks = text.replace(/.nulis /, '')
-    axios.get('https://bangandre.herokuapp.com/nulis?teks='+teks)
+    axios.get('https://tobz-api.herokuapp.com/api/nulis?text=${teks}')
     .then((res) => {
       imageToBase64(res.data.result)
         .then(
@@ -280,7 +280,7 @@ if (text.includes('.nulis')){
 }
 if (text.includes('.nulis')){
   var teks = text.replace(/.nulis /, '')
-    axios.get('https://bangandre.herokuapp.com/nulis?teks='+teks)
+    axios.get('https://tobz-api.herokuapp.com/api/nulis?text='+teks)
     .then((res) => {
       imageToBase64(res.data.result)
         .then(
