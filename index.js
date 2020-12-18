@@ -603,7 +603,7 @@ conn.sendMessage(id, `PONG!!\nSpeed: ${latensi.toFixed(4)} _Second_`, MessageTyp
 }
 if (text.includes('.texthunder')){
   var teks = text.replace(/.texthunder /, '')
-    axios.get('http://jojo-api-doc.herokuapp.com/api/thunder?text=${teks})
+    axios.get('http://jojo-api-doc.herokuapp.com/api/thunder?text=${teks}')
     .then((res) => {
       imageToBase64(res.data.result)
         .then(
