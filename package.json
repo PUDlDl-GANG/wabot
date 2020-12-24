@@ -1,5 +1,5 @@
 {
-  "name": "Ahsan354",
+  "name": "AnxietyBot",
   "version": "1.0.0",
   "description": "Termux only",
   "main": "index.js",
@@ -29,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ahsan354/robotwa4if"
+    "url": "git+https://github.com/PUDlDl/wabot.git"
   },
   "keywords": [
     "k"
@@ -37,7 +37,7 @@
   "author": "Abdul Muttaqin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ahsan354/robotwa4if/issues"
+    "url": "https://github.com/PUDlDl/wabot/issues"
   },
-  "homepage": "https://github.com/ahsan354/robotwa4if#readme"
+  "homepage": "https://github.com/PUDlDl/wabot#readme"
 }
