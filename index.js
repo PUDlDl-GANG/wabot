@@ -146,7 +146,7 @@ else if (text == 'Asu'){
 conn.sendMessage(id, 'Lu Asw' ,MessageType.text);
 }
 else if (text == '.owner'){
-conn.sendMessage(id, 'Owner *ItsmeikyXSec404* wa.me/+6281281872699' ,MessageType.text);
+conn.sendMessage(id, 'Owner *ItsmeikyXSec404* wa.me/+6287714745440' ,MessageType.text);
 }
 else if (text == 'bangsat'){
 conn.sendMessage(id, 'toxic terdeteksi' ,MessageType.text);
@@ -167,7 +167,7 @@ else if (text == 'Hai'){
 conn.sendMessage(id, 'Ya?, Ketik .help/.info/.donasi Contoh .help' ,MessageType.text);
 }
 else if (text == '.ttp'){
-conn.sendMessage(id, ' *COMMAND PREMIUM CHAT WA https://wa.me/6285157566434* ' ,MessageType.text);
+conn.sendMessage(id, ' *COMMAND PREMIUM CHAT* ' ,MessageType.text);
 }
 else if (text == 'Woi'){
 conn.sendMessage(id, 'Ya?, Ketik .help/.info/.donasi Contoh .help' ,MessageType.text);
@@ -208,15 +208,12 @@ conn.sendMessage(id, 'Ya?, Ketik .help/.info/.donasi Contoh .help' ,MessageType.
 else if (text == 'Cuy'){
 conn.sendMessage(id, 'Ya?, Ketik .help/.info/.donasi Contoh .help' ,MessageType.text);
 }
-else if (text == '.frendsowner'){
-conn.sendMessage(id, 'wa.me/+6281281872699' ,MessageType.text);
+else if (text == '.lol'){
+conn.sendMessage(id, 'tolol?' ,MessageType.text);
 }
-else if (text == '.coowner'){
-conn.sendMessage(id, 'wa.me/+6281281872699' ,MessageType.text);
+else if (text == '.dino'){
+conn.sendMessage(id, 'dino eskrim enak' ,MessageType.text);
 }
-//else if (text == '.groupbot'){
-//conn.sendMessage(id, 'group bot whatsapp https://chat.whatsapp.com/IABVod4NWrpB4PIl5rRxRy' ,MessageType.text);
-//}
 else if (text == '.tools1'){
 conn.sendMessage(id, ' *Menampilkan Fitur tools1!!!* ' ,MessageType.text);
 }
@@ -631,7 +628,7 @@ conn.sendMessage(id, 'Succes Change Description Group' ,MessageType.text, { quot
 }
 if (text.includes('.creator')){
 conn.sendMessage(id, {displayname: "Jeff", vcard: vcard}, MessageType.contact)
-conn.sendMessage(id, 'Ingin donasi untuk masukin Bot ke group?, chat Owner :D', MessageType.text, { quoted: m })
+conn.sendMessage(id, 'Nihh nomer ownernya , sv aja nanti di svbck :v', MessageType.text, { quoted: m })
 }
 if (text.includes(".xvideo")){
 const teks = text.replace(/.xvideo /, "")
@@ -846,12 +843,12 @@ axios.get(`https://docs-jojo.herokuapp.com/api/fml`).then((res) => {
 else if (text == '.opengc'){
 let hasil = `${id.split("@s.whatsapp.net")[0]}`;
    conn.groupSettingChange (hasil, GroupSettingChange.messageSend, false);
-conn.sendMessage(id, 'SUCCES, GRUP TELAH DIBUKA' ,MessageType.text, { quoted: m } );
+conn.sendMessage(id, 'DONE, GRUP TELAH DIBUKA' ,MessageType.text, { quoted: m } );
 }
 else if (text == '.closegc'){
  let hasil = `${id.split("@s.whatsapp.net")[0]}`;
    conn.groupSettingChange (hasil, GroupSettingChange.messageSend, true);
-conn.sendMessage(id, 'SUCCES, GRUP TELAH DITUTUP' ,MessageType.text, { quoted: m } );
+conn.sendMessage(id, 'DONE, GRUP TELAH DITUTUP' ,MessageType.text, { quoted: m } );
 }
 if (text.includes('.textimage')){
 const teks = text.replace(/.textimage /, "")
@@ -1669,7 +1666,7 @@ else if (text == '.help'){
 conn.sendMessage(id, '*🔥Nih bro fitur / command yang ada di bot ini jika ada bug / yang tidak bisa mohon maaf ya sedang dalam pertahapan, Jika anda bingun silahkan ketil *.readmi* Thanks for use ITSMEIKY BOT🔥*' ,MessageType.text, { quoted: m });
 }
 //else if (text == '.help'){
-//conn.sendMessage(id, 'Thanks Telah Menggunakan BOT *Itsmeiky BOT V2* , Follow Instagram Mimin Yah😻 : https://instagram.com/@muh_ahsan1999' ,MessageType.text);
+//conn.sendMessage(id, 'Thanks Telah Menggunakan BOT *AnxietyBot* , yg mau mutualan ig gassken: https://instagram.com/itspapoy' ,MessageType.text);
 //}
    if (messageType == 'imageMessage')
    {
@@ -1887,11 +1884,11 @@ if (text.includes(".pokemon"))
             `
       Arti dari nama *${nama}* adalah
 
-❉──────────❉
+❉──────────────────────❉
 
          Nama _*${nama}*_ _${h}_
          
-❉──────────❉
+❉──────────────────────❉
 
 `,
  MessageType.text);
@@ -1917,7 +1914,7 @@ if (text.includes(".pokemon"))
       console.log(""+ d);
       conn.sendMessage(id, `
 
-❉──────────❉
+❉──────────────────────❉
 
  *Kecocokan berdasarkan nama*
 
@@ -1925,7 +1922,7 @@ if (text.includes(".pokemon"))
  _${d}_
 
 
-❉──────────❉
+❉──────────────────────❉
     `, MessageType.text);
   });
   }
@@ -2094,41 +2091,41 @@ axios.get(`https://st4rz.herokuapp.com/api/chord?q=${teks}`).then((res) => {
 else if (text == '.pesankosong'){
 conn.sendMessage(id, '͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏ ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏' ,MessageType.text);
 }
-else if (text == '.helpp'){
+else if (text == '.help'){
 conn.sendMessage(id, '*Tunggu sebentar ya broo...*', MessageType.text, { quoted: m })
 }
 else if (text == '!menu'){
-conn.sendMessage(id, 'Command Salah Woy Untuk Command Ketik .help Ya Njeng :v', MessageType.text, { quoted: m })
+conn.sendMessage(id, 'Command Salah Woy Untuk Command Ketik .help yaps', MessageType.text, { quoted: m })
 }
 else if (text == '#menu'){
-conn.sendMessage(id, 'Command Salah Woy Untuk Command Ketik .help Ya Njeng :v', MessageType.text, { quoted: m })
+conn.sendMessage(id, 'Command Salah Woy Untuk Command Ketik .help yaps', MessageType.text, { quoted: m })
 }
 else if (text == '!help'){
-conn.sendMessage(id, 'Command Salah Woy Untuk Command Ketik .help Ya Njeng :v', MessageType.text, { quoted: m })
+conn.sendMessage(id, 'Command Salah Woy Untuk Command Ketik .help yaps', MessageType.text, { quoted: m })
 }
 else if (text == '.menu'){
-conn.sendMessage(id, 'Command Salah Woy Untuk Command Ketik .help Ya Njeng :v', MessageType.text, { quoted: m })
+conn.sendMessage(id, 'Command Salah Woy Untuk Command Ketik .help yaps', MessageType.text, { quoted: m })
 }
 else if (text == '#menuall'){
-conn.sendMessage(id, 'Command Salah Woy Untuk Command Ketik .help Ya Njeng :v', MessageType.text, { quoted: m })
+conn.sendMessage(id, 'Command Salah Woy Untuk Command Ketik .help yaps', MessageType.text, { quoted: m })
 }
 else if (text == 'bacot'){
 conn.sendMessage(id, 'Iya Lu Bacod Njeng :v -BOT', MessageType.text, { quoted: m })
 }
 else if (text == 'bang'){
-conn.sendMessage(id, 'Iya Untuk Command Ketik .help Ya Njeng :v', MessageType.text, { quoted: m })
+conn.sendMessage(id, 'Iya Untuk Command Ketik .help yaps', MessageType.text, { quoted: m })
 }
 else if (text == '#help'){
-conn.sendMessage(id, 'Command Salah Woy Untuk Command Ketik .help Ya Njeng :v', MessageType.text, { quoted: m })
+conn.sendMessage(id, 'Command Salah Woy Untuk Command Ketik .help yaps', MessageType.text, { quoted: m })
 }
 else if (text == 'Memek'){
-conn.sendMessage(id, 'Memek Lo Bau Njeng -BOT', MessageType.text, { quoted: m })
+conn.sendMessage(id, 'Mm* Lu Bau anjrot -BOT', MessageType.text, { quoted: m })
 }
 else if (text == 'memek'){
-conn.sendMessage(id, 'Memek Lo Bau Njeng -BOT', MessageType.text, { quoted: m })
+conn.sendMessage(id, 'Mm* Lu Bau anjrot -BOT', MessageType.text, { quoted: m })
 }
 else if (text == 'Kontol'){
-conn.sendMessage(id, 'Kontol Lo Bau Njeng -BOT', MessageType.text, { quoted: m })
+conn.sendMessage(id, 'Kuntil Lo Bau anjrot -BOT', MessageType.text, { quoted: m })
 }
 else if (text == 'Pagi lord'){
 conn.sendMessage(id, 'Pagi Juga Lord Untuk Memanggil BOT Silahkan Ketik .help', MessageType.text, { quoted: m })
@@ -2136,8 +2133,8 @@ conn.sendMessage(id, 'Pagi Juga Lord Untuk Memanggil BOT Silahkan Ketik .help', 
 else if (text == 'pagi lord'){
 conn.sendMessage(id, 'Pagi Juga Lord Untuk Memanggil BOT Silahkan Ketik .help', MessageType.text, { quoted: m })
 }
-else if (text == 'itsmemek'){
-conn.sendMessage(id, 'Itsmeiky Ganteng Kan :v', MessageType.text, { quoted: m })
+else if (text == 'Apa'){
+conn.sendMessage(id, 'gppa', MessageType.text, { quoted: m })
 }
   if (text.includes(".hotsearch")){
 const teks = text.replace(/.hostsearch /, "")
@@ -2518,7 +2515,7 @@ if (text.includes(".alay")){
 	})
 }
 
-//Tolonglah bro jangan di ubah ubah XP-TN
+//Tolonglah bro ? by AnxietyBot
 
 
 })
