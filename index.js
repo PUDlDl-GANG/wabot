@@ -1,7 +1,7 @@
-const XPTN = 'Itsmeiky BOT V2'; // Nama Bot Whatsapp
-const instagram = 'https://instagram.com/itsmeikyxsec404'; // Nama Instagramlu cok
-const nomer = 'https://Wa.me/+6281281872699'; // Nomor whatsapplu cok
-const aktif = 'Tergantung jaringan dan donasi'; // Kapan bot lu aktif
+const XPTN = 'AnxietyBot'; // Nama Bot Whatsapp
+const instagram = 'https://instagram.com/itspapoy'; // Nama Instagramlu cok
+const nomer = 'https://Wa.me/+6287714745440'; // Nomor whatsapplu cok
+const aktif = 'Tergantung owner'; // Kapan bot lu aktif
 const groupwa = 'https://chat.whatsapp.com/IABVod4NWrpB4PIl5rRxRy'; // OFFICIAL GRUP LU 1
 const youtube = 'https://chat.whatsapp.com/IABVod4NWrpB4PIl5rRxRy'; // OFFICIAL GRUP LU 2
 //
@@ -74,11 +74,11 @@ fs.existsSync('./session.json') && conn.loadAuthInfo('./session.json')
 //conn.connectOptions.agent = ProxyAgent ('http://1.0.180.120:8080')
 conn.connect();
 
-conn.on('user-presence-update', json => console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @muh_ahsan1999`))
+conn.on('user-presence-update', json => console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @AnxietyBot`))
 conn.on('message-status-update', json =>
 {
    const participant = json.participant ? ' (' + json.participant + ')' : '' // participant exists when the message is from a group
-   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @Itsmeiky`)
+   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @itspapoy`)
 })
 
 conn.on('message-new', async(m) =>
