@@ -1663,7 +1663,7 @@ else if (text == '.foto'){
 conn.sendMessage(id, 'kirim .foto cewek/cowok\n\nContoh: .foto cewek' ,MessageType.text);
 }
 else if (text == '.help'){
-conn.sendMessage(id, '*🔥Nih bro fitur / command yang ada di bot ini jika ada bug / yang tidak bisa mohon maaf ya sedang dalam pertahapan, Jika anda bingun silahkan ketil *.readmi* Thanks for use ITSMEIKY BOT🔥*' ,MessageType.text, { quoted: m });
+conn.sendMessage(id, '*Nih brou fitur / command yang ada di bot ini jika ada bug / yang tidak bisa mohon maaf ya sedang dalam pertahapan, Jika anda bingun silahkan ketil *.readmi* Thanks for use AnxietyBot*' ,MessageType.text, { quoted: m });
 }
 //else if (text == '.help'){
 //conn.sendMessage(id, 'Thanks Telah Menggunakan BOT *AnxietyBot* , yg mau mutualan ig gassken: https://instagram.com/itspapoy' ,MessageType.text);
