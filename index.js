@@ -1034,7 +1034,7 @@ axios.get(`https://arugaz.herokuapp.com/api/howbucins`).then((res) => {
 }
 if (text.includes("!selamat")){
 const teks = text.replace(/!selamat /, "")
-const say = (`*───❉ ITSMEIKY BOT ❉──*\n yeah dapat tulisan selamat *${teks}* \n Selamat *${teks}* juga`)
+const say = (`*───❉ AnxietyBot ❉──*\n yeah dapat tulisan Selamat *${teks}* \n Selamat *${teks}* juga`)
 	conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
     conn.sendMessage(id, say ,MessageType.text);
 }
@@ -1087,7 +1087,7 @@ if (text.includes(".tinyurl")){
 const teks = text.replace(/.tinyurl /, "")
 axios.get(`https://tinyurl.com/api-create.php?url=${teks}`).then((res) => {
 	conn.sendMessage(id, '[ WAIT ] Sedang diproses⏳ silahkan tunggu sebentar', MessageType.text, { quoted: m })
-    let hasil = ` ───❉ ITSMEIKY BOT V2 ❉──\n *Link yang diperpendek dengan tinyurl* \n\n *link:* _${res.data}_ `;
+    let hasil = ` ───❉ AnxietyBot ❉──\n *Link yang diperpendek dengan tinyurl* \n\n *link:* _${res.data}_ `;
     conn.sendMessage(id, hasil ,MessageType.text, { quoted: m });
 })
 }
@@ -1663,7 +1663,7 @@ else if (text == '.foto'){
 conn.sendMessage(id, 'kirim .foto cewek/cowok\n\nContoh: .foto cewek' ,MessageType.text);
 }
 else if (text == '.help'){
-conn.sendMessage(id, '*Nih brou fitur / command yang ada di bot ini jika ada bug / yang tidak bisa mohon maaf ya sedang dalam pertahapan, Jika anda bingun silahkan ketil *.readmi* Thanks for use AnxietyBot*' ,MessageType.text, { quoted: m });
+conn.sendMessage(id, '_Nih brou fitur/command yang ada di bot ini jika ada Bug/yang tidak bisa mohon maaf ya sedang dalam pertahapan,_ Jika anda bingung silahkan ketik *.readmi* _Thanks for use AnxietyBot_' ,MessageType.text, { quoted: m });
 }
 //else if (text == '.help'){
 //conn.sendMessage(id, 'Thanks Telah Menggunakan BOT *AnxietyBot* , yg mau mutualan ig gassken: https://instagram.com/itspapoy' ,MessageType.text);
@@ -1718,7 +1718,7 @@ const get = require('got')
     var meninggal = (body[0]['meninggal']);
     var dirawat = (body[0]['dirawat']);
     console.log(body[0]['name'])
-    conn.sendMessage(id,`🔎DATA WABAH COVID-19 TERBARU DI INDONESIA🔍\n\n📈Positif ==> ${positif} \n📉Sembuh ==> ${sembuh} \n📋Meninggal ==> ${meninggal}\n🗒️Dirawat ==> ${dirawat}`, MessageType.text);
+    conn.sendMessage(id,`🔎DATA KORONCE TERBARU DI INDONESIA🔍\n\n📈Positif ==> ${positif} \n📉Sembuh ==> ${sembuh} \n📋Meninggoy ==> ${meninggal}\n🗒️Dirawat ==> ${dirawat}`, MessageType.text);
 }
    if (text.includes(".quotes"))
    {
@@ -1884,11 +1884,11 @@ if (text.includes(".pokemon"))
             `
       Arti dari nama *${nama}* adalah
 
-❉──────────────────────❉
+❉━━━━━──────────────────────✪
 
          Nama _*${nama}*_ _${h}_
          
-❉──────────────────────❉
+✪──────────────────────━━━━━❉
 
 `,
  MessageType.text);
@@ -1914,7 +1914,7 @@ if (text.includes(".pokemon"))
       console.log(""+ d);
       conn.sendMessage(id, `
 
-❉──────────────────────❉
+❉━━━━━──────────────────────❉
 
  *Kecocokan berdasarkan nama*
 
@@ -1922,7 +1922,7 @@ if (text.includes(".pokemon"))
  _${d}_
 
 
-❉──────────────────────❉
+❉──────────────────────━━━━━❉
     `, MessageType.text);
   });
   }
@@ -2106,7 +2106,7 @@ conn.sendMessage(id, 'Command Salah Woy Untuk Command Ketik .help yaps', Message
 else if (text == '.menu'){
 conn.sendMessage(id, 'Command Salah Woy Untuk Command Ketik .help yaps', MessageType.text, { quoted: m })
 }
-else if (text == '#menuall'){
+else if (text == '#help'){
 conn.sendMessage(id, 'Command Salah Woy Untuk Command Ketik .help yaps', MessageType.text, { quoted: m })
 }
 else if (text == 'bacot'){
@@ -2124,7 +2124,7 @@ conn.sendMessage(id, 'Mm* Lu Bau anjrot -BOT', MessageType.text, { quoted: m })
 else if (text == 'memek'){
 conn.sendMessage(id, 'Mm* Lu Bau anjrot -BOT', MessageType.text, { quoted: m })
 }
-else if (text == 'Kontol'){
+else if (text == 'Kntl'){
 conn.sendMessage(id, 'Kuntil Lo Bau anjrot -BOT', MessageType.text, { quoted: m })
 }
 else if (text == 'Pagi lord'){
