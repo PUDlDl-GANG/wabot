@@ -11,7 +11,7 @@
     "brainly-scraper": "^1.0.2",
     "cheerio": "^1.0.0-rc.3",
     "cloudconvert": "^2.1.5",
-    "got": "^11.8.0",
+    "got": "^11.8.5",
     "gulp": "^4.0.2",
     "gulp-webp": "^4.0.1",
     "image-to-base64": "^2.1.1",
